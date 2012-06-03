@@ -27,11 +27,11 @@ class Login extends CI_Controller
         {
             if($this->login_model->login($this->input->post('username'),$this->input->post('password')))
             {
-                echo '<script>alert(1111)</script>';
+                echo 'success';
             }
             else
             {
-                echo '<script>alert(0000)</script>';
+                echo 'fail';
             }
         }
         else

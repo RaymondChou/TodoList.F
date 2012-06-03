@@ -25,9 +25,12 @@ class Login extends CI_Controller
     {
         if($this->input->post('username')&&$this->input->post('password'))
         {
-            if($this->login_model->login($this->input->post('username'),$this->input->post('password')))
+            $check = $this->login_model->login($this->input->post('username'),$this->input->post('password'));
+            if($check!=false)
             {
-                echo 'success';
+                $this->session->set_userdata('user_id',$check);
+                $this->session->set_userdata('login','true');
+
             }
             else
             {

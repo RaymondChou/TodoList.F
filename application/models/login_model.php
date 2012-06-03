@@ -44,21 +44,25 @@ class Login_model extends CI_Model
 
     function login($username,$password)
     {
+        $this->db->select('id');
         $this->db->from('f_users');
         $this->db->where(array('email'=>$username,'password'=>md5($password)));
+        $query=$this->db->get();
 
-        if($this->db->get()->num_rows()>0)
+        if($query->num_rows()>0)
         {
-            return true;
+            return $query->row()->id;
         }
         else
         {
+            $this->db->select('id');
             $this->db->from('f_users');
             $this->db->where(array('username'=>$username,'password'=>md5($password)));
+            $query=$this->db->get();
 
-            if($this->db->get()->num_rows()>0)
+            if($query->num_rows()>0)
             {
-                return true;
+                return $query->row()->id;
             }
             else
             {

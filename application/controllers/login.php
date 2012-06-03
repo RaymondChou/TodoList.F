@@ -17,6 +17,8 @@ class Login extends CI_Controller
 
     public function index()
     {
+        if($this->session->userdata('login')=='true')
+            redirect('todo');
 
         $this->load->view('login');
     }
@@ -29,7 +31,8 @@ class Login extends CI_Controller
             $check = $this->login_model->login($this->input->post('username'),$this->input->post('password'));
             if($check!=false)
             {
-                $this->session->set_userdata('user_id',$check);
+                $this->session->set_userdata('username',$check->username);
+                $this->session->set_userdata('user_id',$check->id);
                 $this->session->set_userdata('login','true');
                 redirect('todo');
             }
@@ -68,5 +71,6 @@ class Login extends CI_Controller
     public function logout()
     {
         $this->session->set_userdata('login','false');
+        redirect('login');
     }
 }

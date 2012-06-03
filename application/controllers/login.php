@@ -23,6 +23,7 @@ class Login extends CI_Controller
 
     public function login_sub()
     {
+
         if($this->input->post('username')&&$this->input->post('password'))
         {
             $check = $this->login_model->login($this->input->post('username'),$this->input->post('password'));
@@ -30,11 +31,12 @@ class Login extends CI_Controller
             {
                 $this->session->set_userdata('user_id',$check);
                 $this->session->set_userdata('login','true');
-
+                redirect('todo');
             }
             else
             {
-                echo 'fail';
+                $data['error']='Wrong username or password';
+                $this->load->view('login',$data);
             }
         }
         else
@@ -61,5 +63,10 @@ class Login extends CI_Controller
         {
             $this->load->view('login');
         }
+    }
+
+    public function logout()
+    {
+        $this->session->set_userdata('login','false');
     }
 }

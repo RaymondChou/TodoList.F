@@ -22,4 +22,28 @@ class Todo extends CI_Controller
         $this->common_model->footer();
 
     }
+
+    public function add()
+    {
+        if($this->session->userdata('login')=='true')
+        {
+            $db_data['title'] = $this->input->post('title');
+            $db_data['body'] = $this->input->post('body');
+
+            $this->load->model('todo/add_model');
+            if($this->add_model->insert($db_data))
+            {
+                redirect('todo');
+            }
+            else
+            {
+                echo 'error';
+            }
+
+        }
+        else
+        {
+            redirect('login');
+        }
+    }
 }

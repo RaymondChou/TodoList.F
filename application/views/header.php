@@ -124,6 +124,7 @@
             <li class="active"><a href="#add_default" rel="tooltip" class="tooltip-f" title="Required" data-toggle="tab">Default</a></li>
             <li><a href="#add_image" rel="tooltip" class="tooltip-f" title="Optional" data-toggle="tab">Image</a></li>
             <li><a href="#add_file" rel="tooltip" class="tooltip-f" title="Optional" data-toggle="tab">File</a></li>
+            <li><a href="#json" rel="tooltip" class="tooltip-f" title="Optional" data-toggle="tab">JSON</a></li>
         </ul>
         <form class="form-horizontal">
         <div class="tab-content">
@@ -167,11 +168,10 @@
             <div class="tab-pane" id="add_file">
                 <fieldset>
                     <div class="control-group">
-                        <label class="control-label" for="input01">Files</label>
                         <form id="fileupload" action="server/php/" method="POST" enctype="multipart/form-data">
                             <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
                             <div class="row fileupload-buttonbar">
-                                <div class="span7">
+                                <div class="span5">
                                     <!-- The fileinput-button span is used to style the file input field as button -->
                 <span class="btn btn-success fileinput-button">
                     <i class="icon-plus icon-white"></i>
@@ -208,6 +208,16 @@
                             <!-- The table listing the files available for upload/download -->
                             <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
                         </form>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="tab-pane" id="json">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="input01">JSON</label>
+                        <div class="controls">
+                            <textarea  class="input-xlarge" rows="10" id=""></textarea>
+                        </div>
                     </div>
                 </fieldset>
             </div>

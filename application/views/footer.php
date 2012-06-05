@@ -25,6 +25,7 @@
 <script src="<?php echo site_url()?>js/bootstrap-collapse.js"></script>
 <script src="<?php echo site_url()?>js/bootstrap-carousel.js"></script>
 <script src="<?php echo site_url()?>js/bootstrap-typeahead.js"></script>
+<script src="<?php echo site_url()?>js/My97DatePicker/WdatePicker.js"></script>
 <script src="<?php echo site_url()?>js/jquery-ui.min.js"></script>
 <script src="<?php echo site_url()?>js/tag-it.js"></script>
 <link href="<?php echo site_url()?>css/tagit.ui-zendesk.css" rel="stylesheet">

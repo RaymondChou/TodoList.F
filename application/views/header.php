@@ -17,6 +17,7 @@
     </style>
     <link href="<?php echo site_url()?>css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo site_url()?>css/jquery.fileupload-ui.css">
+    <link rel="stylesheet" href="<?php echo site_url()?>js/My97DatePicker/skin/WdatePicker.css">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -190,6 +191,29 @@
                         <div class="controls">
                             <ul class="input-xlarge" style="margin-left:0;" id="singleFieldTags"></ul>
                             <input name="tags" id="mySingleField" value="" style="display: none;"  disabled="true">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="control-group">
+                        <label rel="tooltip" title="Degree" data-content="Higher is important" class="control-label popover-f" for="select01">Degree</label>
+                        <div class="controls">
+                            <select id="select01" name="hot">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="control-group">
+                        <label rel="tooltip" title="Degree" data-content="Higher is important" class="control-label popover-f" for="select01">Time to Finish</label>
+                        <div class="controls">
+                            <input class="Wdate" type="text" onclick="WdatePicker({skin:'blueFresh'})">
                         </div>
                     </div>
                 </fieldset>

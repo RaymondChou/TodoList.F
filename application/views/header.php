@@ -15,7 +15,6 @@
             padding-bottom: 40px;
         }
     </style>
-<<<<<<< HEAD
     <style>
         #timeline-embed{
             margin:0px !important;
@@ -30,8 +29,6 @@
 
         }
     </style>
-=======
->>>>>>> 7865c2e2f3e0d17551b6e571b8c8dd641926d6fb
     <link href="<?php echo site_url()?>css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo site_url()?>css/jquery.fileupload-ui.css">
     <link rel="stylesheet" href="<?php echo site_url()?>js/My97DatePicker/skin/WdatePicker.css">

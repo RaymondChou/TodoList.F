@@ -26,6 +26,7 @@
             -moz-box-shadow:0 0px 0px rgba(0, 0, 0, 0.25) !important;
             -webkit-box-shadow:0 0px 0px rgba(0, 0, 0, 0.25) !important;
             box-shadow:0px 0px 0px rgba(0, 0, 0, 0.25) !important;
+
         }
     </style>
     <link href="<?php echo site_url()?>css/bootstrap-responsive.css" rel="stylesheet">

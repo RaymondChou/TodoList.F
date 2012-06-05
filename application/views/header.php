@@ -67,7 +67,14 @@
                             <li><a href="">Last Month</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">All</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">All <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Inactivity</a></li>
+                            <li><a href="#">Activition</a></li>
+                            <li><a href="#">Completion</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">TimeLine</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Output <b class="caret"></b></a>
@@ -198,7 +205,7 @@
                     <div class="control-group">
                         <label rel="tooltip" title="Degree" data-content="Higher is important" class="control-label popover-f" for="select01">Degree</label>
                         <div class="controls">
-                            <select id="select01" name="hot">
+                            <select id="select01" name="degree">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -213,7 +220,7 @@
                     <div class="control-group">
                         <label rel="tooltip" title="Degree" data-content="Higher is important" class="control-label popover-f" for="select01">Time to Finish</label>
                         <div class="controls">
-                            <input class="Wdate" type="text" onclick="WdatePicker({skin:'blueFresh'})">
+                            <input class="Wdate" name="begin_time" type="text" onclick="WdatePicker({skin:'blueFresh',lang:'en',minDate:'%y-%M-%d'})">
                         </div>
                     </div>
                 </fieldset>

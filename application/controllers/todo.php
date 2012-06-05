@@ -29,6 +29,9 @@ class Todo extends CI_Controller
         {
             $db_data['title'] = $this->input->post('title');
             $db_data['body'] = $this->input->post('body');
+            $db_data['hot'] = $this->input->post('degree');
+            $db_data['begin_time'] = $this->input->post('begin_time');
+            $db_data['create_time'] = time();
 
             $this->load->model('todo/add_model');
             if($this->add_model->insert($db_data))

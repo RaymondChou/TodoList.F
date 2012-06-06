@@ -21,6 +21,11 @@ class Timeline extends CI_Controller
         $this->common_model->footer();
     }
 
+    public function display()
+    {
+        $this->load->view('embed');
+    }
+
     public function json()
     {
         if(1==1)
@@ -40,7 +45,7 @@ class Timeline extends CI_Controller
                 "text":"<p>Sh*t Politicians Say landed just hours before Thursday night’s Republican presidential debate and stars actor Joe Leon. In true political fashion, his character rattles off common jargon heard from people running for office.</p><p>Do these ring a bell? Moral fiber, family values, trust me, three-point plan, earmarks, tough question, children are our future, Washington outsider, jobs, my opponent — all sound familiar.</p>",
                 "asset":
                 {
-                    "media":"http://youtu.be/u4XpeU9erbg",
+                    "media":" ",
                     "credit":"",
                     "caption":""
                 }
@@ -51,7 +56,7 @@ class Timeline extends CI_Controller
                 "text":"<p>Have you ever heard someone say “can I burn a copy of your Nickelback CD?” or “my Bazooka gum still has flavor!” Nobody says that.</p>",
                 "asset":
                 {
-                    "media":"http://youtu.be/f-x8t0JOnVw",
+                    "media":" ",
                     "credit":"",
                     "caption":""
                 }
@@ -67,7 +72,7 @@ class Timeline extends CI_Controller
                 "text":"",
                 "asset":
                 {
-                    "media":"http://youtu.be/yRvJylbSg7o",
+                    "media":" ",
                     "credit":"",
                     "caption":"Directed and Edited by Matt Mayer, Produced by Seth Keim, Written by Eliot Glazer. Featuring Eliot and Ilana Glazer, who are siblings, not married."
                 }

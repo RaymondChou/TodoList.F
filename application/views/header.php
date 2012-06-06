@@ -89,7 +89,7 @@
                             <li><a href="#">Completion</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">TimeLine</a></li>
+                    <li><a href="<?php echo site_url('timeline')?>">TimeLine</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Output <b class="caret"></b></a>
                         <ul class="dropdown-menu">
